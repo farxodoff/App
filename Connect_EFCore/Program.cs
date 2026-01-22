@@ -1,5 +1,9 @@
-﻿using Connect_EFCore.Entities;
+﻿using Connect_EFCore.Data;
+using Connect_EFCore.Entities;
 using Connect_EFCore.Services;
+using Connect_EFCore.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Connect_EFCore
 {
@@ -7,8 +11,6 @@ namespace Connect_EFCore
     {
         static void Main(string[] args)
         {
-
-            // Git Test uchun komment
             var employeeService = new EmployeeService();
 
             // Get All

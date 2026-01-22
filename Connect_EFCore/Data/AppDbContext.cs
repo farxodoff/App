@@ -13,12 +13,6 @@ namespace Connect_EFCore.Data
         public DbSet<Role> Roles { get; set; }
         
 
-        // Dependency Injection - Consctuctor 
-        public AppDbContext(DbContextOptions<AppDbContext> options)
-                : base(options)
-        { 
-        }
-
         public AppDbContext()
         {
         }
