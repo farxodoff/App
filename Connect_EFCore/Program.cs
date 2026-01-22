@@ -7,6 +7,8 @@ namespace Connect_EFCore
     {
         static void Main(string[] args)
         {
+
+            // Git Test uchun komment
             var employeeService = new EmployeeService();
 
             // Get All
