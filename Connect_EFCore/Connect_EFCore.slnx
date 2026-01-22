@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../Connect_EFCore_WebAPI/Connect_EFCore_WebAPI.csproj" Id="61498d02-1dca-4726-90a2-fe0257799900" />
+  <Project Path="Connect_EFCore.csproj" />
+</Solution>

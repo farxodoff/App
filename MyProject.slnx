@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="../../ERA/MyFirstApp/ConnectEFCore/Connect_EFCore/Connect_EFCore_Data/Connect_EFCore.csproj" />
+  <Project Path="../../ERA/MyFirstApp/ConnectEFCore/Connect_EFCore/Connect_EFCore_WebAPI/Connect_EFCore_WebAPI.csproj" />
+  <Project Path="MyProject.csproj" />
+</Solution>
