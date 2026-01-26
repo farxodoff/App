@@ -7,7 +7,8 @@ using Connect_EFCore.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Db
-builder.Services.AddDbContext<AppDbContext>(options =>
+
+IServiceCollection serviceCollection = builder.Services.AddDbContext<DbContext>(static options =>
     options.UseNpgsql(
         "Host=localhost;Port=5432;Database=ConnectEF;Username=postgres;Password=postgres")
     );

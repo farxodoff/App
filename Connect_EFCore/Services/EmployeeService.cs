@@ -6,9 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Connect_EFCore.Services
 {
-    public class EmployeeService : BaseService, IEmployeeService
+    public class EmployeeService : BaseService<AppDbContext>, IEmployeeService
     {
-        public EmployeeService(DbContext context) : base(context)
+        private readonly AppDbContext _context;
+
+        public EmployeeService(AppDbContext context) : base(context)
         {
 
         }
@@ -87,11 +89,11 @@ namespace Connect_EFCore.Services
         public void AddEmployee(Employee employee)
         {
             _context.Employees.Add(employee);
-            _context.SaveChanges();
+            //_context.SaveChanges();
         }
         public decimal GetAverageSalary()
         {
-           return _context.Employees.Average(x => x.Salary);
+            return _context.Employees.Average(x => x.Salary);
         }
         public decimal GetMaxSalary()
         {

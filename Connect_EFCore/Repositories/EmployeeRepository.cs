@@ -10,7 +10,8 @@ namespace Connect_EFCore.Repositories
 {
     public class EmployeeRepository : IEmployeeRepository
     {
-        private readonly AppDbContext _context;
+        public readonly AppDbContext _context;
+
         public EmployeeRepository(AppDbContext context)
         {
             _context = context;

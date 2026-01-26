@@ -1,4 +1,5 @@
 ﻿using Connect_EFCore.Entities;
+using Connect_EFCore.Services;
 using Connect_EFCore.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -12,9 +13,9 @@ namespace Connect_EFCore_WebAPI.Controllers
     {
 
 
-        private readonly IEmployeeService _employeeService;
+        private readonly EmployeeService _employeeService;
 
-        public EmployeeController(IEmployeeService employeeService)
+        public EmployeeController(EmployeeService employeeService)
         {
             _employeeService = employeeService;
         }

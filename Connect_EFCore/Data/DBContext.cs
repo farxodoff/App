@@ -4,9 +4,9 @@ namespace Connect_EFCore.Data
 {
     public abstract class DBContext
     {
-        public readonly DbContext _context;
+        public readonly AppDbContext _context;
 
-        public DBContext(DbContext context)
+        public DBContext(AppDbContext context)
         {
             _context = context;
         }

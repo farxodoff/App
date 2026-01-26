@@ -3,9 +3,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Connect_EFCore.Services
 {
-    public class BaseService : DBContext
+    public class BaseService<T> where T : class
     {
-        public BaseService(DbContext context) : base(context) { }
+        public BaseService(T context)
+        {
+
+        }
 
     }
 }
