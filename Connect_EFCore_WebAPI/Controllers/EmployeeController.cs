@@ -1,18 +1,29 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Connect_EFCore.Entities;
+using Connect_EFCore.Services.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Connect_EFCore.Entities;
 
 
 namespace Connect_EFCore_WebAPI.Controllers
 {
     [ApiController]
-    [Route("controller")]
+    [Route("[controller]")]
     public class EmployeeController : ControllerBase
     {
-        [HttpGet(Name = "GetAllEmployee")]
-        public IEnumerable<Employee> GetAllEmployees()
+
+
+        private readonly IEmployeeService _employeeService;
+
+        public EmployeeController(IEmployeeService employeeService)
         {
-            return _context.Employees.ToList();
+            _employeeService = employeeService;
+        }
+
+        [HttpGet]
+        public IActionResult GetAllEmployee()
+        {
+            var employees = _employeeService.GetEmployeesWithRoles();
+            return Ok(employees);
         }
     }
 }

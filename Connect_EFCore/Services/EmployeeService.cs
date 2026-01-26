@@ -7,10 +7,7 @@ namespace Connect_EFCore.Services
 {
     public class EmployeeService : Base, IEmployeeService
     {
-        /*public EmployeeService(AppDbContext context) : base(context)
-        {
-        }*/
-        public EmployeeService() : base(new AppDbContext())
+        public EmployeeService(AppDbContext context) :base(context)
         {
         }
 
