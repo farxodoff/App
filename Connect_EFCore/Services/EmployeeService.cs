@@ -1,14 +1,16 @@
-﻿using Connect_EFCore.Data;
+﻿using System;
+using Connect_EFCore.Data;
 using Connect_EFCore.Entities;
 using Connect_EFCore.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace Connect_EFCore.Services
 {
-    public class EmployeeService : Base, IEmployeeService
+    public class EmployeeService : BaseService, IEmployeeService
     {
-        public EmployeeService(AppDbContext context) :base(context)
+        public EmployeeService(DbContext context) : base(context)
         {
+
         }
 
         // Methods in interface

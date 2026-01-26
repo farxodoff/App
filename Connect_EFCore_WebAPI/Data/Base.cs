@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Connect_EFCore.Data
+namespace Connect_EFCore_WebAPI.Data
 {
     public abstract class Base
     {

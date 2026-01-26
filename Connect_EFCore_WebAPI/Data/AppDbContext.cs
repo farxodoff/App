@@ -4,7 +4,7 @@ using System.Text;
 using Connect_EFCore.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Connect_EFCore.Data
+namespace Connect_EFCore_WebAPI.Data
 {
     public class AppDbContext : DbContext
     {
@@ -17,6 +17,7 @@ namespace Connect_EFCore.Data
             : base(options)
         {
         }
+
 
     }
 }
